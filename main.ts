@@ -8,6 +8,7 @@
 
 // variables
 let neopixelStrip: neopixel.Strip = null
+let loopCounter = 0
 
 // cleanup
 basic.clearScreen()
@@ -21,9 +22,10 @@ basic.showIcon(IconNames.Happy)
 
 input.onButtonPressed(Button.A, function () {
   basic.showIcon(IconNames.SmallHeart)
+while (true) {
 
-  // set to red
-  neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
+  // set to green
+  neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
   neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
   neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
   neopixelStrip.show()
@@ -36,14 +38,42 @@ input.onButtonPressed(Button.A, function () {
   neopixelStrip.show()
   basic.pause(1000)
 
-  // set to green
+  // set to red
   neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
   neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
-  neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Green))
+  neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Red))
   neopixelStrip.show()
   basic.pause(1000)
-  basic.showIcon(IconNames.Happy)
-})
+
+  loopCounter = 7
+  while (loopCounter >= 0) {
+    basic.pause(1000)
+    basic.showNumber(loopCounter)
+    loopCounter = loopCounter - 1
+    pause(500)
+  }
+    // set to red
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Red))
+    neopixelStrip.show()
+    basic.pause(1000)
+
+    // set to yellow
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Yellow))
+    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.show()
+    basic.pause(1000)
+
+    // set to green
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.show()
+    basic.pause(1000)
+}})
+
 
 input.onButtonPressed(Button.B, function () {
   // reset everything
