@@ -72,6 +72,14 @@ while (true) {
     neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
     neopixelStrip.show()
     basic.pause(1000)
+
+  loopCounter = 7
+  while (loopCounter >= 0) {
+    basic.pause(1000)
+    basic.showNumber(loopCounter)
+    loopCounter = loopCounter - 1
+    pause(500)
+  }
 }})
 
 
