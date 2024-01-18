@@ -23,7 +23,6 @@ basic.showIcon(IconNames.Happy)
 input.onButtonPressed(Button.A, function () {
   basic.showIcon(IconNames.SmallHeart)
   while (true) {
-
     // set to green
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
     neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
@@ -80,8 +79,8 @@ input.onButtonPressed(Button.A, function () {
       loopCounter = loopCounter - 1
       pause(500)
     }
-}})
-
+  }
+})
 
 input.onButtonPressed(Button.B, function () {
   // reset everything
