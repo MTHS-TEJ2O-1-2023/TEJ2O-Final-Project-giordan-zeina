@@ -58,6 +58,13 @@ input.onButtonPressed(Button.A, function () {
     neopixelStrip.show()
     basic.pause(1000)
 
+    // set to Yellow
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Yellow))
+    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.show()
+    basic.pause(1000)
+
     // set to green
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
     neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
